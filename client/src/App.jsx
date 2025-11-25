@@ -212,9 +212,9 @@ export default function App() {
     setSuggestions([]);
 
     try {
-      const res = await axios.post(`${API_BASE_URL}/api/upload`, formData, {
+      const res = await axios.post(API_BASE_URL+"/api/upload", formData, {
         headers: {
-
+            "Content-Type" : "multipart/form-data"
         },
         onUploadProgress: (evt) => {
         },
